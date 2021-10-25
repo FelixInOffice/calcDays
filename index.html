@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>你和你重視之人的相處時間還剩多少？</title>
+</head>
+
+<body oninput="calc()">
+    <div>
+        <div>
+            <span id="question01">他/她今年多大：</span>
+            <input type="number" id="question01Ans">
+        </div>
+        <div>
+            <span id="question02">每年與他/她相見的日子：</span>
+            <input type="number" id="question02Ans">
+        </div>
+        <div>
+            <span id="question03">每次相見多少小時：</span>
+            <input type="number" id="question03Ans">
+        </div>
+        <div>
+            <div>結果</div>
+            <div>你與他的相處時間剩餘多少天：</div>
+            <div id="output"></div>
+        </div>
+    </div>
+    <script>
+        function calc() {
+            var age = document.getElementById("question01Ans").value;
+            var days = document.getElementById("question02Ans").value;
+            var hours = document.getElementById("question03Ans").value;
+
+            var averageAge = 84.7;
+            var changeToHours = 24;
+
+            var result = (averageAge - age) * ((days * hours) / changeToHours)
+
+            document.getElementById("output").innerHTML = result;
+        }
+    </script>
+</body>
+
+</html>
