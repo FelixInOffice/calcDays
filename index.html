@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
     <title>你和你重視之人的相處時間還剩多少？</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -70,6 +71,87 @@
             background-color: brown;
             border-color: brown;
         }
+
+        #refTable {
+            display: grid;
+            grid-template-columns: 1fr fit-content(500px) 1fr;
+            grid-template-rows: 1fr 10px 1fr 1fr 1fr 1fr 1fr 1fr;
+            grid-template-areas:
+                '. refTitle .'
+                '. . .'
+                'refM01 refE01 refY01'
+                'refM02 refE02 refY02'
+                'refM03 refE03 refY03'
+                '. . .'
+                'refM04 refE04 refY04'
+                'refM05 refE05 refY05';
+            justify-items: center;
+            grid-column-gap: 10px;
+        }
+
+        #refTitle {
+            grid-area: refTitle;
+        }
+
+        #refM01 {
+            grid-area: refM01;
+        }
+
+        #refE01 {
+            grid-area: refE01;
+        }
+
+        #refY01 {
+            grid-area: refY01;
+        }
+
+        #refM02 {
+            grid-area: refM02;
+        }
+
+        #refE02 {
+            grid-area: refE02;
+        }
+
+        #refY02 {
+            grid-area: refY02;
+        }
+
+        #refM03 {
+            grid-area: refM03;
+        }
+
+        #refE03 {
+            grid-area: refE03;
+        }
+
+        #refY03 {
+            grid-area: refY03;
+        }
+
+        #refM04 {
+            grid-area: refM04;
+        }
+
+        #refE04 {
+            grid-area: refE04;
+        }
+
+        #refY04 {
+            grid-area: refY04;
+        }
+
+        #refM05 {
+            grid-area: refM05;
+        }
+
+        #refE05 {
+            grid-area: refE05;
+        }
+
+        #refY05 {
+            grid-area: refY05;
+        }
     </style>
 </head>
 
@@ -87,6 +169,25 @@
             <button class="btn btn-primary" id="next-1" disabled>下一步</button>
         </div>
         <div id="Q2" class="hideQuestion">
+            <div id="refTable">
+                <div id="refTitle">對照表</div>
+                <div id="refM01">每月不到1次</div>
+                <div id="refE01">=</div>
+                <div id="refY01">每年6次</div>
+                <div id="refM02">每月約1至2次</div>
+                <div id="refE02">≈</div>
+                <div id="refY02">每年18次</div>
+                <div id="refM03">每月約3至4次</div>
+                <div id="refE03">≈</div>
+                <div id="refY03">每年38次</div>
+
+                <div id="refM04">每週約1至2次</div>
+                <div id="refE04">≈</div>
+                <div id="refY04">每年75次</div>
+                <div id="refM05">每週約3至4次</div>
+                <div id="refE05">≈</div>
+                <div id="refY05">每年140次</div>
+            </div>
             <div id="question02">每年與他/她相見的日子：</div>
             <input class="form-control" type="number" id="question02Ans">
             <div class="buttonSet">
