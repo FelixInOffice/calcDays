@@ -218,8 +218,16 @@
             display: none;
         }
 
+        #headerImage {
+            display: block;
+        }
+
         @media screen and (max-width:535px) {
             #headerImage_B {
+                display: none;
+            }
+
+            #headerImage {
                 display: none;
             }
 
@@ -236,6 +244,10 @@
             #headerImage_B {
                 display: block;
             }
+
+            #headerImage {
+                display: none;
+            }
         }
     </style>
 </head>
@@ -244,6 +256,7 @@
     <div id="imageCover">
         <img src="images/header-M.webp" id="headerImage_M" class="headerImage" />
         <img src="images/header-B.webp" id="headerImage_B" class="headerImage" />
+        <img src="images/header.webp" id="headerImage" class="headerImage" />
     </div>
     <div id="questions">
         <div id="Q1" class="showQuestion">
