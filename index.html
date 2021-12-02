@@ -16,7 +16,7 @@
             margin: 0;
         }
 
-        #headerImage {
+        .headerImage {
             width: 100%;
             height: 100%;
             object-fit: cover;
@@ -209,12 +209,41 @@
                 opacity: 1;
             }
         }
+
+        #headerImage_M {
+            display: none;
+        }
+
+        #headerImage_B {
+            display: none;
+        }
+
+        @media screen and (max-width:535px) {
+            #headerImage_B {
+                display: none;
+            }
+
+            #headerImage_M {
+                display: block;
+            }
+        }
+
+        @media screen and (min-width:1439px) {
+            #headerImage_M {
+                display: none;
+            }
+
+            #headerImage_B {
+                display: block;
+            }
+        }
     </style>
 </head>
 
 <body oninput="calc()" onload="loopAgeSelector()">
     <div id="imageCover">
-        <img src="images/header.webp" id="headerImage" />
+        <img src="images/header-M.webp" id="headerImage_M" class="headerImage" />
+        <img src="images/header-B.webp" id="headerImage_B" class="headerImage" />
     </div>
     <div id="questions">
         <div id="Q1" class="showQuestion">
